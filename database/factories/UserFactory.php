@@ -23,9 +23,12 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $randomNumber = $this->faker->randomNumber(); // Generate a random number
+
         return [
             'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
+            // 'email' => fake()->unique()->safeEmail(),
+            'email' => 'viewer' . $randomNumber . '@example.com', // Concatenate with a random number
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),

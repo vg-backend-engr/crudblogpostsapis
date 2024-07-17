@@ -42,4 +42,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // Assuming you have a relationship method for posts liked by the user
+    public function likedPosts()
+    {
+        return $this->belongsToMany(Post::class, 'likes', 'user_id', 'post_id')->withTimestamps();
+    }
+
+    public function toggleLike(Post $post)
+    {
+        // Check if the user has already liked the post
+        if ($this->likedPosts()->where('post_id', $post->id)->exists()) {
+            // If liked, remove the like
+            $this->likedPosts()->detach($post->id);
+            return 'unliked';
+        } else {
+            // If not liked, add the like
+            $this->likedPosts()->attach($post->id);
+            return 'liked';
+        }
+    }
 }

@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\LikeController;
+use App\Http\Controllers\CommentController;
+
+use App\Http\Controllers\API\UserController;
+use App\Http\Middleware\TokenMiddleware;
