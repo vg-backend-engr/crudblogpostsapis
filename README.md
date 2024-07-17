@@ -1,4 +1,4 @@
-## About CRUD Blog/Posts APIs
+# About CRUD Blog/Posts APIs
 This a simple CRUD Blog/Posts APIs with user interactivity using PHP 8.1^ and Laravel 10.
 
 ## API Endpoint Definitions:
@@ -28,11 +28,11 @@ This a simple CRUD Blog/Posts APIs with user interactivity using PHP 8.1^ and La
         ◦ Like Post:an endpoint for liking a post.
         ◦ Comment on Post:an endpoint for commenting on a post.
 
-# Exported Postman collections
+## Exported Postman collections
     1. The exported collection called "CRUD Blog/Posts APIs" can be found in the root directory of the repository
     2. The collection contains the endpoints for each of the tasks specified in the API endpoint definitions 1, 2 and 3.
 
-# Instructions on how to run the project
+## Instructions on how to run the project
     Prerequisites
     1. Install PHP 8.1 or higher: Make sure PHP is installed on your system. You can download it from php.net.
     2. Install Composer: Laravel uses Composer for dependency management. You can download it from getcomposer.org.
@@ -66,12 +66,12 @@ This a simple CRUD Blog/Posts APIs with user interactivity using PHP 8.1^ and La
     • Authentication: For the APIs authentication, use "Bearer Token". The token to use is vg@123.
 
 
-# Requirements Addressed
+## Requirements Addressed
     1. Database Seeder: A database Seeder was created utilizing factory to create a user instance that was used as the viewer to fulfill requirement 3.
     2. Define and Utilize Relationships: Laravel eloquent was used to define and manage the relationships between the blogs, posts , likes and comments.
     3. Token Middleware: A token middleware was implemented to guard all routes. The value of this token from the request header is vg@123.
 
-# Additional Requirements:
+## Additional Requirements:
     • MVC Pattern: The development followed the MVC (Model-View-Controller) pattern.
     • JSON Responses: All responses are in JSON format.
     • Input Validations: Proper validations was required on all input fields.
