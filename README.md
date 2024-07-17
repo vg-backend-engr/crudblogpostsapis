@@ -47,7 +47,7 @@ This a simple CRUD Blog/Posts APIs with user interactivity using PHP 8.1^ and La
     cd <project_directory>
     2. Install Dependencies
     Navigate to your project directory and install PHP dependencies using Composer: composer install
-    3. Set Up Environment Variables: Update .env file with the database credentials, API keys, and any other necessary configuration settings, provided via email. Also, setup the MySQL database with the credentials provided.
+    3. Set Up Environment Variables using the .env file containing the database credentials, API keys, and any other necessary configuration settings. Also, setup the MySQL database with the credentials provided.
     4. Generate Application Key: Generate an application key which is used for encryption and other security aspects: php artisan key:generate
     5. Run Migrations
     Run migrations to create the necessary database tables: php artisan migrate
